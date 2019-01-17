@@ -1,0 +1,63 @@
+/* definição do padrão da font e da cor da página */
+body {
+	color: #333333;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+/* definição do tamanho e alinhamento de cada bloco da página */
+.container {
+	margin: 0 auto;
+	width: 940px;
+}
+
+/* Definição do layout do Header */
+	/* padrão do header */
+	header {
+		position: relative;
+		bottom: 2px;
+	}
+
+	/* propriedades da imagem da sacola */
+	.sacola {
+		/* definição do background da sacola */
+		background-image: url(../img/sacola.png);
+		background-repeat: no-repeat;
+		background-position: top right;
+
+		/* definição da fonte e do alinhamento da mensagem */
+		font-size: 14px;
+		padding-right: 35px;
+		padding-top: 8px;
+		text-align: right;
+		width: 140px;
+
+		/* posicionamento da sacola */
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+	
+	/* definição do posicionamento da tab de navegação */
+	.menu-opcoes {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
+
+	/* definição da fonte da tab de navegação */
+	.menu-opcoes ul {
+		font-size: 15px;
+	}
+
+	/* definição da cor da tab de navegação */
+	.menu-opcoes a {
+		color: #036;
+	}
+
+	/* definição do alinhamento e a disposição da tab de navegação */
+	.menu-opcoes ul li {
+		display: inline;
+		margin-left: 20px;
+	}
+
+/* Fim do Layout do Header 
