@@ -1,4 +1,4 @@
-/* definição do padrão da font e da cor da página */
+ /* definição do padrão da font e da cor da página */
 body {
 	color: #333333;
 	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
@@ -61,3 +61,185 @@ body {
 	}
 
 /* Fim do Layout do Header 
+
+/* Definição do Layout dos Menu e Destaques */
+
+	/* padrão da div */
+	.destaque {
+		margin-top: 10px;
+	}
+
+	/* padrão básico da opção de busca e dos menus */
+	.busca,
+	.menu-departamentos {
+		/* cores e fontes */
+		background-color: #DCDCDC;
+		font-weight: bold;
+		text-transform: uppercase;
+
+		/* alinhamento */
+		margin-right: 10px;
+		width: 230px;
+
+		/* posicionamento */
+		float: left;
+	}
+
+	/* alinhamento do menu do departamento */
+	.menu-departamentos {
+		clear: left;
+
+		margin-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	/* padrão dos cabeçalhos e do formulário */
+	.busca h2,
+	.busca form,
+	.menu-departamentos h2 {
+		margin: 10px;
+	}
+
+	/* padrão da lista */
+	.menu-departamentos li {
+		background-color: white;
+		margin-bottom: 1px;
+		padding: 5px 10px;
+	}
+
+	/* padrão dos links */
+	.menu-departamentos a {
+		color: #333333;
+		text-decoration: none;
+	}
+
+	/* tamanho da caixa de texto */
+	.busca input[type=search] {
+		width: 170px;
+	}
+
+	/* padrão do botão de busca */
+	.busca button {
+		/* adicionando imagem */
+		background-image: url(../img/busca.png);
+		background-repeat: no-repeat;
+		border: none;
+
+		/* tamanho da imagem */
+		width: 20px;
+		height: 20px;
+
+		/* image replacement */
+		text-indent: -9999px;
+	}
+
+/* Fim do Layout do Menu e Destaques 
+
+/* Layout dos paineis */
+
+	/* alinhamento dos paineis */
+	.painel {
+		margin: 10px 0 10px 0;
+		padding: 10px;
+		width: 445px;
+	}
+
+	/* padrão das listas */
+	.painel li {
+		/* posicionamento e tamanho */
+		display: inline-block;
+		vertical-align: top;
+		width: 140px;
+
+		/* alinhamento */
+		margin: 2px;
+		padding-bottom: 10px;
+	}
+
+	/* padrão do cabeçalho */
+	.painel h2 {
+		/* estilo do texto */
+		font-size: 24px;
+		font-weight: bold;
+		text-transform: uppercase;
+
+		/* posicionamento */
+		margin-bottom: 10px;
+	}
+
+	/* padrão dos links */
+	.painel a {
+		/* estilos da fonte */
+		color: #333;
+		font-size: 14px;
+		text-align: center;
+		text-decoration: none;
+	}
+
+	/* Layout das novidades */
+		.novidades {
+			float: left;
+			background-color: #F5DCDC;
+		}
+	/* Fim do Layout das novidades */
+
+	/* Layout dos mais vendidos */
+		.mais-vendidos {
+			float: right;
+			background-color: #DCDCF5;
+		}
+	/* Fim do Layout dos mais vendidos */
+
+/* Fim do Layout dos paineis */
+
+/* Layout do rodapé */
+	/* imagem do fundo, posicionamento e espaçamento interno */
+	footer {
+		background-image: url(../img/fundo-rodape.png);
+		clear: both;
+		padding: 20px 0;
+		margin-top: 5px;
+	}
+
+	/* apenas permitir que os atributos internos se movimentem */
+	footer .container {
+		position: relative;
+	}
+
+	/* posicionamento dos componentes da lista de redes sociais */
+	.social {
+		position: absolute;
+		top: 12px;
+		right: 0px;
+	}
+
+	/* padrão dos links da lista de redes sociais */
+	.social a {
+		/* tamanho da imagem */
+		height: 32px;
+		width: 32px;
+
+		/* image replacement */
+		display: block;
+		text-indent: -9999px;
+	}
+
+	/* substitução por imagens de cada link */
+	.social a[href*="facebook.com"] {
+		background-image: url(../img/facebook.png);
+	}
+
+	.social a[href*="twitter.com"] {
+		background-image: url(../img/twitter.png);
+	}
+
+	.social a[href*="plus.google.com"] {
+		background-image: url(../img/googleplus.png);
+	}
+
+	/* posicionamento da lista */
+	.social li {
+		float: left;
+		margin-left: 25px;
+	}
+/* Fim do Layout do rodapé */
