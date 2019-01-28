@@ -60,6 +60,15 @@ body {
 		margin-left: 20px;
 	}
 
+	/* estilo dos links */
+	.menu-opcoes a:hover {
+		color: #007DC6;
+	}
+
+	.menu-opcoes a:active {
+		color: #867DC6;
+	}
+
 /* Fim do Layout do Header 
 
 /* Definição do Layout dos Menu e Destaques */
@@ -67,6 +76,13 @@ body {
 	/* padrão da div */
 	.destaque {
 		margin-top: 10px;
+	}
+
+	/* padrão da opção de busca */
+	.busca {
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
+			
 	}
 
 	/* padrão básico da opção de busca e dos menus */
@@ -113,6 +129,25 @@ body {
 		text-decoration: none;
 	}
 
+	/* submenus do menu do departamento */
+		.menu-departamentos li ul {
+			display: none;
+		}
+
+		.menu-departamentos li:hover ul {
+			display: block;
+		}
+
+		.menu-departamentos ul ul li {
+			background-color: #DCDCDC;
+		}
+
+		.menu-departamentos li li a:before {
+			content: '\2756';
+			padding-right: 5px;
+			opacity: 0.4;
+		}
+
 	/* tamanho da caixa de texto */
 	.busca input[type=search] {
 		width: 170px;
@@ -142,6 +177,10 @@ body {
 		margin: 10px 0 10px 0;
 		padding: 10px;
 		width: 445px;
+
+		/* destaques no painel (bordas arredondadas e sombras) */
+		border-radius: 4px;
+		box-shadow: inset 1px 1px 4px #999;
 	}
 
 	/* padrão das listas */
@@ -154,8 +193,23 @@ body {
 		/* alinhamento */
 		margin: 2px;
 		padding-bottom: 10px;
+
+		transition: 1s ease-out;
 	}
 
+	/* transição do painel de destaque */
+	.painel li:hover {
+		background-color: rgba(255, 255, 255 0.8);
+		box-shadow: 0 0 5px #333;
+	    transform: scale(1.2) rotate(-5deg);
+		transition: 1s ease-in;
+	}
+
+	.painel li:nth-child(2n):hover {
+	    transform: scale(1.2) rotate(5deg);
+		transition: 1s ease-in;
+	}
+	
 	/* padrão do cabeçalho */
 	.painel h2 {
 		/* estilo do texto */
@@ -165,6 +219,9 @@ body {
 
 		/* posicionamento */
 		margin-bottom: 10px;
+
+		/* sombra no texto */
+		text-shadow: 3px 3px 2px rgba(255, 255, 255, 0.8);
 	}
 
 	/* padrão dos links */
@@ -180,6 +237,9 @@ body {
 		.novidades {
 			float: left;
 			background-color: #F5DCDC;
+			background-color: -webkit-linear-gradient(#F);
+			background-color: -o-linear-gradient(#F);
+			background-color: linear-gradient(#F5DCDC, #BEBEF4);
 		}
 	/* Fim do Layout das novidades */
 
@@ -187,6 +247,7 @@ body {
 		.mais-vendidos {
 			float: right;
 			background-color: #DCDCF5;
+			background-color: linear-gradient(#DCDCF5, #F4BEBE);
 		}
 	/* Fim do Layout dos mais vendidos */
 
