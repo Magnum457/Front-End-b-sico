@@ -1,0 +1,242 @@
+/* organizando o posicionamento da fcampo com os produtos */
+.cores {
+	position: relative;
+	padding-top: 90px;
+}
+
+/* definindo o posicionamento da legenda das escolhas das cores (mais para cubrir a diferença entre navegadores) */
+.cores legend {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+/* desenhando as opções como bolinhas coloridas */
+	/* desenhando as bolinhas */
+		.cores label::after {
+			/* definindo o display das bolinhas */
+			content: '';
+			display: block;
+
+			/* desenhando as bolinhas */
+			border-radius: 50%;
+			width: 50px;
+			height: 50px;
+
+			/* organizanod o posicionamento delas */
+			box-sizing: border-box;
+			position: absolute;
+			top: 30px;
+
+			/* mudando o cursor */
+			cursor: pointer;
+	}
+
+	/* pintando as bolinhas com cada cor */
+		label[for=verde]::after {
+			background-color: #33CC66;
+			left: 0;
+		}
+
+		label[for=rosa]::after {
+			background-color: #FF6666;
+			left: 60px;
+		}
+
+		label[for=azul]::after {
+			background-color: #6666FF;
+			left: 120px;
+		}
+
+/* mudando a borda quando uma bolinha é selcionada */
+	.cores input:checked + label::after {
+		border: 6px solid rgba(0, 0, 0, 0.3);
+		trasition: all 1s;
+	}
+
+/* fazendo uma transição suave quando deixamos o mouse em uma bolinha */
+	.cores	label:hover::after	{
+		border:	6px	solid rgba(0,0,0,0.1);
+		transition:	all 1s;
+	}
+
+/* definindo um tamanho máximo para a imagem */
+	.cores label img {
+		display: block;
+		max-width: 100%;
+		border: 2px solid #CCC;
+	}
+
+/* escondendo os botões originais que não serão usados */
+	.cores input[type=radio] {
+		display: none;
+	}
+
+/* escondendo as imagens que não estão selecionadas */
+	.cores input:not(:checked) + label img {
+		display: none;
+	}
+
+/* posicionamento e cor de fundo da página */
+	.produto {
+		color: #333;
+		line-height: 1.3;
+		margin-top: 2em;
+	}
+
+/* estilação no cabeçalho */
+	.produto h1 {
+		font-size: 1.8em;
+		font-weight: bold;
+	}
+
+/* estilação no paragrafp */
+	.produto p {
+		font-size: 1.2em;
+		font-style: italic;
+		margin-bottom: 1em;
+	}
+
+/* estilização da legenda */
+	.produto legend {
+		display: block;
+		font: bold 	0.9em/e.5 Arial;
+		text-transform: uppercase;
+	}
+
+/* organizando o botão de comprar */
+	.comprar {
+		/*cor e borda */
+		background: #91BD3C;
+		border: none;
+		color: #333;
+
+		/* fonte */
+		font-size: 1.4em;
+		text-transform: uppercase;
+
+		/* efeito de sombra */
+		box-shadow: 0 1px 3px #777;
+
+		/* posicionamento e display */
+		display: block;
+		padding: 0.5em 1em;
+		margin: 1em 0;
+	}
+
+/* layout da div de destaques */
+	/* posicionamento */
+	.detalhes {
+		padding: 2em 0;
+	}
+
+	/* fonte do cabeçalho */
+	.detalhes h2 {
+		font-size: 1.5em;
+		line-height: 2;
+	}
+
+	/* estilo do paragrafo */
+	.detalhes p {
+		margin: 1em 0;
+		font-size: 1em;
+		line-height: 1.5;
+		max-width: 36em;
+	}
+
+/* estilo da tabela */
+	table {
+		border-spacing: 0.2em;
+		border-collapse: separate;
+	}
+
+	thead {
+		background-color: #999;
+	}
+
+	thead th {
+		font-weight: bold;
+		padding: 0.3em 1em;
+		text-align: center;
+	}
+
+	td {
+		padding: 0.3em;
+	}
+
+	tr:nth-child(2n) {
+		background-color: #CCC;
+	}
+
+	td:first-child {
+		font-style: italic;
+	}
+
+/* estilo do fundo de tela */
+	.produto-back {
+		background-color: #F2F2F2;
+		margin-top: 1em;
+		border-top: 2px solid #CCC;
+	}
+
+/* design exclusico para telas maiores que 630px */
+
+@media (min-width: 630px) {
+	.produto {
+		/* liberando o posisiconamento dos componentes do produto */
+		position: relative;
+
+		/* deixando um espaço em branco na esquerda para ser ocupado pela foto */
+		padding-left: 40%;
+
+		/* aumentando o tamanho da fonte */
+		font-size: 1.2em;
+	}
+
+	.cores {
+		/* deixando a posição do componente fixa */
+		position: static;
+
+		padding: 0;
+	}
+
+	.cores legend {
+		position: static;
+	}
+
+	.cores label img {
+		/* posicionando a imagem ao topo e a esquerda em relação ao .produto */
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		/* definindo o tamanho da imagem */
+		max-width: 35%;
+		max-height: 100%;
+	}
+
+	.cores label::after {
+		/* posicionando e fixando as bolinhas */
+		position: static;
+		float: left;
+
+		/* criação de uma margem entre as bolinhas */
+		margin-right: 10px;
+	}
+
+	/* alinhando os fieldset */
+	fieldset {
+		display: inline-block;
+		vertical-align: top;
+
+		margin: 1em 0;
+		min-width: 240px;
+		width: 45%;
+	}
+
+}
+
+@media (min-width: 500px) {
+	.detalhes {
+		font-size: 1.2em;
+	}
+}
