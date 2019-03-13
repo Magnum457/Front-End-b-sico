@@ -3,6 +3,7 @@
 	var output_total = document.querySelector("#total");
 
 // funções
+	// função para calcular o valor do produto
 	input_quantidade.oninput = function() {
 		// pegando o valor do preço do produto
 		var preco = document.querySelector("#preco").textContent;
@@ -22,3 +23,8 @@
 
 		output_total.value = total;
 	}
+
+	// função para rodar as mascaras
+	$(document).ready(function(){
+		$(":input").inputmask();
+	});

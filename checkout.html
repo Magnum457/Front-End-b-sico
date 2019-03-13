@@ -128,7 +128,7 @@
 
 							<div class="form-group">
 								<label for="cpf">CPF</label>
-								<input type="text" class="form-control" id="cpf" name="cpf" placeholder="000.000.000-00" required>
+								<input type="text" class="form-control" id="cpf" name="cpf" placeholder="000.000.000-00" required data-inputmask="'mask' : '999.999.999-99'">
 							</div>
 
 							<div class="form-group custom-control custom-checkbox">
@@ -144,7 +144,8 @@
 
 							<div class="form-group">
 								<label for="numero-cartao">Número - CVV</label>
-								<input type="text" class="form-control" id="numero-cartao" name="numero-cartao">
+								<input type="text" class="form-control" id="numero-cartao" name="numero-cartao" 
+								data-inputmask="'mask': '9999 9999 9999 9999 - 999'">
 							</div>
 
 							<div class="form-group">
@@ -171,7 +172,7 @@
 				</div>
 				
 					<button type="submit" class="btn btn-primary btn-lg">
-						<span class="oi oi-thumb-up"></span>
+						<!-- <span class="oi oi-thumb-up"></span> -->
 						Confirmar Pedido
 					</button>
 				</form>
@@ -185,6 +186,7 @@
 	<!-- JS -->
 		<script type="text/javascript" src="js/jquery.js"></script>
 		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/jquery.inputmask.js"></script>
 		<script type="text/javascript" src="js/total.js"></script>
 	<!-- Fim do JS -->
 </body>
